@@ -1,0 +1,110 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Modelos;
+
+import java.util.LinkedList;
+
+/**
+ *
+ * @author pipet
+ */
+public class Taller {
+    private String id;
+    private String nombre;
+    private String direccion;
+    private LinkedList<Tecnico> misTecnicos;
+    private LinkedList<Cubiculo> misCubiculos;
+    public Taller(String id, String nombre, String direccion) {
+        this.id = id;
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.misTecnicos=new LinkedList<>();
+        this.misCubiculos=new LinkedList<>();
+    }
+    public void crearTecnico(String cedula,
+                            String nombre, 
+                            String telefono,
+                            String especializacion,
+                            int añosExperiencia){
+        
+        Tecnico nuevoTecnico=new Tecnico(cedula, nombre, telefono, especializacion, añosExperiencia);
+        this.misTecnicos.add(nuevoTecnico);
+    }
+    public void crearCubiculo(String id){
+        Cubiculo nuevoCubiculo=new Cubiculo(id);
+        this.misCubiculos.add(nuevoCubiculo);
+    }
+    /**
+     * @return the id
+     */
+    public String getId() {
+        return id;
+    }
+
+    /**
+     * @param id the id to set
+     */
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    /**
+     * @return the nombre
+     */
+    public String getNombre() {
+        return nombre;
+    }
+
+    /**
+     * @param nombre the nombre to set
+     */
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    /**
+     * @return the direccion
+     */
+    public String getDireccion() {
+        return direccion;
+    }
+
+    /**
+     * @param direccion the direccion to set
+     */
+    public void setDireccion(String direccion) {
+        this.direccion = direccion;
+    }
+
+    /**
+     * @return the misTecnicos
+     */
+    public LinkedList<Tecnico> getMisTecnicos() {
+        return misTecnicos;
+    }
+
+    /**
+     * @param misTecnicos the misTecnicos to set
+     */
+    public void setMisTecnicos(LinkedList<Tecnico> misTecnicos) {
+        this.misTecnicos = misTecnicos;
+    }
+
+    /**
+     * @return the misCubiculos
+     */
+    public LinkedList<Cubiculo> getMisCubiculos() {
+        return misCubiculos;
+    }
+
+    /**
+     * @param misCubiculos the misCubiculos to set
+     */
+    public void setMisCubiculos(LinkedList<Cubiculo> misCubiculos) {
+        this.misCubiculos = misCubiculos;
+    }
+    
+}
