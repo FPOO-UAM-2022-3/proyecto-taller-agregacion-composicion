@@ -50,6 +50,13 @@ public class Taller {
         }
         return antiguo;
     }
+    public int contarCarros(){
+        int respuesta=0;
+        for(Cubiculo cubiculoActual:this.misCubiculos){
+            respuesta+=cubiculoActual.calcularCarros();
+        }
+        return respuesta;
+    }
     /**
      * @return the id
      */

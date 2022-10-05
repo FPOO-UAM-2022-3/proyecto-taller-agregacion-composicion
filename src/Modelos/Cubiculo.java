@@ -19,6 +19,16 @@ public class Cubiculo {
         this.id = id;
         this.misVehiculos=new LinkedList<>();
     }
+    public int calcularCarros(){
+        int respuesta=0;
+        for(Vehiculo actual:this.misVehiculos){
+            if (actual instanceof Carro) {
+                respuesta+=1;
+            }
+  
+        }
+        return respuesta;
+    }
     public void agregarKit(Kit nuevoKit){
         this.setMiKit(nuevoKit);
     }
