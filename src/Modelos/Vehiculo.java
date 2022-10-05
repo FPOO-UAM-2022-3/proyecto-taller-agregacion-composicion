@@ -11,13 +11,14 @@ import java.util.LinkedList;
  *
  * @author pipet
  */
-public class Vehiculo {
+public abstract class Vehiculo {
     private String placa;
     private String marca;
     private int año;
     private String color;
     private double avaluo;
     private Motor miMotor;
+    private Cliente miCliente;
     private LinkedList<Diagnostico> misDiagnosticos;
     public Vehiculo(String placa, String marca, int año, String color, double avaluo) {
         this.placa = placa;
@@ -128,6 +129,20 @@ public class Vehiculo {
      */
     public void setMisDiagnosticos(LinkedList<Diagnostico> misDiagnosticos) {
         this.misDiagnosticos = misDiagnosticos;
+    }
+
+    /**
+     * @return the miCliente
+     */
+    public Cliente getMiCliente() {
+        return miCliente;
+    }
+
+    /**
+     * @param miCliente the miCliente to set
+     */
+    public void setMiCliente(Cliente miCliente) {
+        this.miCliente = miCliente;
     }
     
 }

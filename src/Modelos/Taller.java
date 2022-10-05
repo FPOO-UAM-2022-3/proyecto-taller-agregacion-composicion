@@ -37,6 +37,19 @@ public class Taller {
         Cubiculo nuevoCubiculo=new Cubiculo(id);
         this.misCubiculos.add(nuevoCubiculo);
     }
+    public Vehiculo vehiculoAntiguo(){
+        Vehiculo antiguo=null;
+        int menor=Integer.MAX_VALUE;
+        for(Cubiculo cubiculoActual:this.misCubiculos){
+            for(Vehiculo vehiculoActual:cubiculoActual.getMisVehiculos()){
+                if(vehiculoActual.getAño()<menor){
+                    menor=vehiculoActual.getAño();
+                    antiguo=vehiculoActual;
+                }
+            }
+        }
+        return antiguo;
+    }
     /**
      * @return the id
      */
